@@ -41,6 +41,7 @@ Trên Windows (sử dụng MinGW g++):
 bash
 g++ Car.cpp -o Car.exe
 Car.exe
+
 Áp dụng tương tự cho các file khác như Book.cpp, Account.cpp, v.v.
 
 
