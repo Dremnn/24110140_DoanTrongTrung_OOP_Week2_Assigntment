@@ -28,17 +28,14 @@ Trên hệ điều hành Linux / macOS / WSL:
 
 Ví dụ với file Car.cpp:
 
-bash
 g++ Car.cpp -o Car
 ./Car
 Ví dụ với file Circle.cpp:
 
-bash
 g++ Circle.cpp -o Circle
 ./Circle
 Trên Windows (sử dụng MinGW g++):
 
-bash
 g++ Car.cpp -o Car.exe
 Car.exe
 
