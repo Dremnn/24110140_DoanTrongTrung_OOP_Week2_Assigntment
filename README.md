@@ -30,10 +30,12 @@ Ví dụ với file Car.cpp:
 
 g++ Car.cpp -o Car
 ./Car
+
 Ví dụ với file Circle.cpp:
 
 g++ Circle.cpp -o Circle
 ./Circle
+
 Trên Windows (sử dụng MinGW g++):
 
 g++ Car.cpp -o Car.exe
