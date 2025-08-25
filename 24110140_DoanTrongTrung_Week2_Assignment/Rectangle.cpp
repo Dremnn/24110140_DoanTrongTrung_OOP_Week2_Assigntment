@@ -2,9 +2,14 @@
 using namespace std;
 
 class Rectangle {
-public:
+private:
     int width;
     int height;
+public:
+    Rectangle( int w , int h ) {   
+        width = w;
+        height = h;
+    }
 
     int calculateArea() {
         return width * height;
@@ -12,9 +17,7 @@ public:
 };
 
 int main() {
-    Rectangle rect1;
-    rect1.width = 5;
-    rect1.height = 10;
+    Rectangle rect1(5, 10);
     cout << "Area: " << rect1.calculateArea() << endl;
 
     return 0;

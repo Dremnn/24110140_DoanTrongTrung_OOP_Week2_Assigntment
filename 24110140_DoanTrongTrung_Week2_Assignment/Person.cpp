@@ -2,12 +2,18 @@
 using namespace std;
 
 class Person {
-public:
+private:
     string name;
     int age;
     string address;
     string phoneNumber;
-
+public:
+    Person(string n , int a , string addr , string phone) {
+        name = n;
+        age = a;
+        address = addr;
+        phoneNumber = phone;
+    }
     void displayInfo() {
         cout << "Name: " << name << endl;
         cout << "Age: " << age << endl;
@@ -29,12 +35,7 @@ public:
 };
 
 int main() {
-    Person person1;
-    person1.name = "John Doe";
-    person1.age = 20;
-    person1.address = "123 Main St";
-    person1.phoneNumber = "1234567890";
-
+    Person person1("Jane Doe", 17, "456 Main St", "0987654321");
     person1.displayInfo();
     cout << endl;
 

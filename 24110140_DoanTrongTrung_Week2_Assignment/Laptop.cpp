@@ -3,13 +3,20 @@
 using namespace std;
 
 class Laptop {
-public:
+private:
     string brand;
     string model;
     int ram; // Dung lượng RAM tính bằng GB
     int storage; // Dung lượng ổ cứng tính bằng GB
     string gpu;
-
+public:
+    Laptop(string b , string m , int r , int s , string g) {
+        brand = b;
+        model = m;
+        ram = r;
+        storage = s;
+        gpu = g;
+    }
     void displayInfo() {
         cout << "Brand: " << brand << endl;
         cout << "Model: " << model << endl;
@@ -51,20 +58,15 @@ public:
 };
 
 int main() {
-    Laptop laptop1;
-    laptop1.brand = "Dell";
-    laptop1.model = "XPS 13";
-    laptop1.ram = 8;
-    laptop1.storage = 256;
-    laptop1.gpu = "RTX 3060";
-
+    Laptop laptop1("Dell", "XPS 13", 8, 256, "Intel Iris Xe");
     laptop1.displayInfo();
-
+    cout << endl;
     // Kiểm tra xem laptop có đủ RAM để chạy phần mềm yêu cầu 16GB RAM
     laptop1.checkRAM(16);
+    cout << endl;
     // Kiểm tra xem gpu của laptop có đủ mạnh để chơi game với gpu tối thiểu là GTX 1050 
     laptop1.checkGPU("GTX 1050");
-
+    cout << endl;
     // Nâng cấp RAM thêm 16GB
     laptop1.upgradeRAM(16);
     laptop1.displayInfo();

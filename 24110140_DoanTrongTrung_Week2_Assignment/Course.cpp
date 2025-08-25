@@ -2,11 +2,18 @@
 using namespace std;
 
 class Course {
-public:
+private:
     string courseName;
     string courseCode;
     string instructorName;
     int credits;
+public:
+    Course(string name , string code , string instructor , int creditHours ) {
+        courseName = name;
+        courseCode = code;
+        instructorName = instructor;
+        credits = creditHours;
+    }
 
     void displayInfo() {
         cout << "Course Name: " << courseName << endl;
@@ -26,12 +33,7 @@ public:
 };
 
 int main() {
-    Course course1;
-    course1.courseName = "Object Oriented Programming";
-    course1.courseCode = "CS202";
-    course1.credits = 4;
-    course1.instructorName = "Nguyen Van A";
-
+    Course course1("Object Oriented Programming", "CS202", "Nguyen Van A", 4);
     course1.displayInfo();
 
     if (course1.isHighCredit()) {
